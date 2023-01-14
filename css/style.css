@@ -25,6 +25,7 @@
 }
 img {
   display: block;
+  max-width: 100%;
 }
 .page-header {
   display: flex;
@@ -378,4 +379,47 @@ footer {
   margin-top: 20px;
   margin-left: 70px;
   display: flex;
+}
+.portfolio-animation {
+  position: relative;
+  overflow: hidden;
+  color: var(--text-color-white);
+}
+.portfolio-animation-p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 49px 45px 49px 24px;
+  font-size: 18px;
+  font-weight: 400;
+
+  transform: translateY(101%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: #2196f3e5;
+}
+.portfolio-card:hover .portfolio-animation-p,
+.portfolio-card:focus .portfolio-animation-p {
+  transform: translateY(0);
+}
+.what-we-do-list {
+  position: relative;
+  margin: auto;
+  color: var(--text-color-white);
+}
+.what-we-do-p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #2f303acc;
+  display: flex;
+  justify-content: center;
 }
