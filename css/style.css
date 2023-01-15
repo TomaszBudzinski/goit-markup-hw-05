@@ -75,6 +75,8 @@ img {
   font-size: 14px;
   color: var(--note-link-color);
   font-style: normal;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address {
   font-size: 14px;
@@ -91,7 +93,22 @@ img {
   font-weight: 500;
   font-size: 14px;
   color: var(--brand-color);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.menu-nav::before,
+.menu-nav::after {
+  display: block;
+  content: "";
+  background-size: contain;
+}
+.menu-nav::after {
+  display: none;
+  border-bottom: 4px solid var(--link-button-color);
+  border-radius: 2px;
+  padding-bottom: 28px;
+}
+
 .button-entry:hover,
 .button-entry:focus {
   background-color: var(--link-button-color);
@@ -109,6 +126,8 @@ img {
   width: 200px;
   height: 50px;
   margin-top: 30px;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bg-entry {
   background-image: url(https://s3-alpha-sig.figma.com/img/1131/4362/dd953143a8a4d9f86ec8d71afc0e8103?Expires=1674432000&Signature=VeDTIJzFre0SHZ7-NOQ55r99hiiKdTLc7jBhQ~rHfXY-KqX7mi~SRxUILTPmUrY6-5~eokQOqlm1Rl2GkwEjBtC0XmRxpAh8dKVpIh-gGsTjHwuhqUY1YAHIujRHwTDK8fIs~GQsskzXy7yiL7Pqsz~1YjImT-7qxfVVd~gLrySN~VjocsiE9aDv5gJYng8m-JDWfqO2NP5ZKLIfQAdhRCW1-XeFZMXdoyCxnJjk5UJMvbozv~bqNVbuCF1nRlD71aZB5wwfx0gLlxMU17we1uNZ-6kOxBrerNNpuLzXxGfcdHczlpI0fJddQ0K5naWst4kMUHQcV~1CWqQvGb~aUg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
@@ -206,6 +225,8 @@ footer {
   font-weight: 500;
   font-size: 14px;
   font-style: normal;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .web-title-footer {
   text-decoration: none;
@@ -230,6 +251,8 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-task {
   cursor: pointer;
@@ -237,6 +260,8 @@ footer {
   width: 121px;
   height: 38px;
   border: none;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button > .portfolio-button-list:not(:last-child) {
   margin-right: 8px;
@@ -284,10 +309,14 @@ footer {
   fill: var(--note-link-color);
   font-style: normal;
   margin-right: 10px;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .trump-icon {
   background-color: #f5f4fa;
   background-size: 270px 120px;
+  margin: 25px 100px;
+  border-radius: 4px;
 }
 .social-media-list {
   fill: #afb1b8;
@@ -297,6 +326,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-list:hover,
 .social-media-list:focus {
@@ -317,10 +348,6 @@ footer {
   height: 120px;
   margin-bottom: 30px;
 }
-.trump-icon {
-  margin: 25px 100px;
-  border-radius: 4px;
-}
 .h2-clients {
   font-weight: 700;
   font-size: 36px;
@@ -339,6 +366,8 @@ footer {
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list:hover,
 .clients-list:focus {
@@ -374,6 +403,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-media {
   margin-top: 20px;
@@ -422,4 +453,27 @@ footer {
   background-color: #2f303acc;
   display: flex;
   justify-content: center;
+}
+.modal {
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: var(--text-color-white);
+  position: fixed;
+  z-index: 1;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
 }
