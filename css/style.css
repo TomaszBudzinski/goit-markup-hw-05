@@ -32,7 +32,7 @@ img {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ececec;
-  height: auto;
+  height: 80px;
 }
 .title-color1 {
   color: var(--link-button-color);
@@ -98,8 +98,6 @@ img {
   position: relative;
   padding: 32px 0;
 }
-.menu-nav-item {
-}
 
 .menu-nav-active::after {
   content: "";
@@ -143,6 +141,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .h1 {
   font-size: 44px;
@@ -478,4 +477,18 @@ footer {
   transform: translateX(-50%) translateY(-50%) scale(0);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
+}
+.bg-x {
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  padding: 9.5px;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-window {
+  display: flex;
+  justify-content: flex-end;
 }
